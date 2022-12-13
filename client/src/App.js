@@ -1,23 +1,21 @@
-import React, { useMemo } from 'react';
-import { useSelector } from 'react-redux';
-import { createTheme } from '@mui/material/styles';
-import { CssBaseline, ThemeProvider} from "@mui/material";
-import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
-
-import { themeSettings } from 'theme';
-
-import Layout from "./screens/layout/index";
-import Dashboard from "./screens/dashboard/index";
-import Products from "./screens/products/index";
-import Customers from "./screens/customers/index";
-import Transactions from "./screens/transactions/index";
-import Geography from "./screens/geography/index";
-import Overview from "./screens/overview/index";
-import Daily from "./screens/daily/index";
-import Monthly from "./screens/monthly/index";
-import Breakdown from "./screens/breakdown/index";
-import Admin from "./screens/admin/index";
-import Performance from "./screens/performance/index";
+import { CssBaseline, ThemeProvider } from "@mui/material";
+import { createTheme } from "@mui/material/styles";
+import { useMemo } from "react";
+import { useSelector } from "react-redux";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import { themeSettings } from "theme";
+import Layout from "scenes/layout";
+import Dashboard from "scenes/dashboard";
+import Products from "scenes/products";
+import Customers from "scenes/customers";
+import Transactions from "scenes/transactions";
+import Geography from "scenes/geography";
+import Overview from "scenes/overview";
+import Daily from "scenes/daily";
+import Monthly from "scenes/monthly";
+import Breakdown from "scenes/breakdown";
+import Admin from "scenes/admin";
+import Performance from "scenes/performance";
 
 function App() {
   const mode = useSelector((state) => state.global.mode);
@@ -28,7 +26,7 @@ function App() {
         <ThemeProvider theme={theme}>
           <CssBaseline />
           <Routes>
-            <Routes element={<Layout />}>
+            <Route element={<Layout />}>
               <Route path="/" element={<Navigate to="/dashboard" replace />} />
               <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/products" element={<Products />} />
@@ -41,7 +39,7 @@ function App() {
               <Route path="/breakdown" element={<Breakdown />} />
               <Route path="/admin" element={<Admin />} />
               <Route path="/performance" element={<Performance />} />
-            </Routes>
+            </Route>
           </Routes>
         </ThemeProvider>
       </BrowserRouter>

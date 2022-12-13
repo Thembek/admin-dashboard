@@ -7,17 +7,17 @@ import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import { themeSettings } from 'theme';
 
 import Layout from "./screens/layout/index";
-import Dashboard from "./scenes/dashboard/index";
-import Products from "./scenes/products/index";
-import Customers from "./scenes/customers/index";
-import Transactions from "./scenes/transactions/index";
-import Geography from "./scenes/geography/index";
-import Overview from "./scenes/overview/index";
-import Daily from "./scenes/daily/index";
-import Monthly from "./scenes/monthly/index";
-import Breakdown from "./scenes/breakdown/index";
-import Admin from "./scenes/admin/index";
-import Performance from "./scenes/performance/index";
+import Dashboard from "./screens/dashboard/index";
+import Products from "./screens/products/index";
+import Customers from "./screens/customers/index";
+import Transactions from "./screens/transactions/index";
+import Geography from "./screens/geography/index";
+import Overview from "./screens/overview/index";
+import Daily from "./screens/daily/index";
+import Monthly from "./screens/monthly/index";
+import Breakdown from "./screens/breakdown/index";
+import Admin from "./screens/admin/index";
+import Performance from "./screens/performance/index";
 
 function App() {
   const mode = useSelector((state) => state.global.mode);

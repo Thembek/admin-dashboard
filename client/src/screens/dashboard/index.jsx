@@ -8,6 +8,7 @@ import Header from '../../components/Header';
 import FlexBetween from '../../components/FlexBetween';
 import OverviewChart from '../../components/OverviewChart';
 import BreakdownChart from '../../components/BreakDownChart';
+import StatBox from '../../components/StatBox';
 
 const Dashboard = () => {
     const theme = useTheme();

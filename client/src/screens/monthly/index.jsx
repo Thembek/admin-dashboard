@@ -1,4 +1,3 @@
-import { Box } from '@mui/system';
 import React, { useMemo } from 'react';
 import { ResponsiveLine } from '@nivo/line';
 import { Box, useTheme } from '@mui/material'; 

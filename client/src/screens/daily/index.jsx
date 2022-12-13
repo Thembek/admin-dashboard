@@ -1,11 +1,14 @@
 import React, { useMemo, useState } from 'react';
+import { Box, useTheme } from '@mui/material';
 import DatePicker from 'react-datepicker';
 import { ResponsiveLine } from "@nivo/line";
 import { useGetSalesQuery } from '../../state/api';
 import 'react-datepicker/dist/react-datepicker.css';
 
+import Header from '../../components/Header';
+
 const Daily = () => {
-    const [startDate, setStateDate] = useState(new Date("2021-02-01"));
+    const [startDate, setStartDate] = useState(new Date("2021-02-01"));
     const [endDate, setEndDate] = useState(new Date("2021-03-01"));
     const { data } = useGetSalesQuery();
     const theme = useTheme();
@@ -25,7 +28,7 @@ const Daily = () => {
             data: [],
         };
 
-        Object.values(dailtData).forEach(({ date, totalSales, totalUnits }) => {
+        Object.values(dailyData).forEach(({ date, totalSales, totalUnits }) => {
             const dateFormatted = new Date(date);
             if(dateFormatted >= startDate && dateFormatted <= endDate){
                 const splitDate = date.substring(date.indexOf("-") + 1);
@@ -74,7 +77,7 @@ const Daily = () => {
                     data 
                      ? (
                         <ResponsiveLine
-                            data={formattedDate}
+                            data={formattedData}
                             theme={{
                                 axis: {
                                     domain:{

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useMemo } from 'react';
 import { useTheme } from '@mui/material';
 import { ResponsiveLine } from '@nivo/line';
 import { useGetSalesQuery } from 'state/api';
@@ -47,7 +47,7 @@ const OverviewChat = ({ isDashboard = false, view }) => {
 
     return(
         <ResponsiveLine 
-            data= { viwe === 'sales' ? totalSalesLine : totalUnitsLine }
+            data= { view === 'sales' ? totalSalesLine : totalUnitsLine }
             theme={{
                 axis: {
                     domain: {

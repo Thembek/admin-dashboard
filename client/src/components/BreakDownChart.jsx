@@ -2,7 +2,6 @@ import React from 'react';
 import { ResponsivePie } from '@nivo/pie';
 import { useGetSalesQuery } from '../state/api';
 import { Box, Typography, useTheme } from '@mui/material';
-import { thTH } from '@mui/material/locale';
 
 
 const BreakdownChart = ({ isDashboard = false }) => {

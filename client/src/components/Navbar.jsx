@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { AppBar, Button, Box, Typography, IconButton, InputBase, Toolbar, Menu, MenuItem, useTheme } from '@mui/material'
-import { LightModeOutlined, DarkModeOutlined, Menu, Search, SettingsOutlined, ArrowDropDownOutlined } from '@mui/icons-material';
+import { LightModeOutlined, DarkModeOutlined, Menu as MenuIcon, Search, SettingsOutlined, ArrowDropDownOutlined } from '@mui/icons-material';
 import { useDispatch } from 'react-redux';
 import { setMode } from 'state';
 import profileImage from 'assets/profile.jpeg';
